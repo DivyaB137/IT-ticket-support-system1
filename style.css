@@ -1,0 +1,80 @@
+:root {
+    --bg: #f4f4f4;
+    --card: #ffffff;
+    --text: #111;
+}
+
+.dark {
+    --bg: #101010;
+    --card: #1a1a1a;
+    --text: #fff;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial;
+    margin: 0;
+}
+
+header {
+    background: #276EF1;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--card);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #aaa;
+}
+
+.card input, 
+.card select, 
+.card textarea {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+button {
+    background: #276EF1;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.priority-High { color: red; font-weight: bold; }
+.priority-Medium { color: orange; }
+.priority-Low { color: green; }
+
+.status-select {
+    padding: 5px;
+}

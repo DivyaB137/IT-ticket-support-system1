@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Ticket Support System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>IT Ticket Support System</h2>
+        <button id="darkToggle">🌙</button>
+    </header>
+
+    <section class="container">
+
+        <!-- Create Ticket Form -->
+        <div class="card">
+            <h3>Create New Ticket</h3>
+
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <input type="text" id="title" placeholder="Issue Title">
+            <textarea id="description" placeholder="Describe your issue"></textarea>
+
+            <select id="priority">
+                <option value="Low">Low Priority</option>
+                <option value="Medium">Medium Priority</option>
+                <option value="High">High Priority</option>
+            </select>
+
+            <button onclick="createTicket()">Submit Ticket</button>
+        </div>
+
+        <!-- Ticket List -->
+        <div class="card">
+            <h3>All Tickets</h3>
+
+            <input type="text" id="search" placeholder="Search ticket title..." onkeyup="renderTickets()">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="ticketBody"></tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
